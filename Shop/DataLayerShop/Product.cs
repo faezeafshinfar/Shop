@@ -12,6 +12,7 @@ namespace DataLayerShop
         public int PersianTitle { get; set; }
         public int EnglishTitle { get; set; }
         public int AvailableCount { get; set; }
+        public bool IsAvailable { get; set; }
         public char Producter { get; set; }
         public char FUllExplain { get; set; }
         public char ShortExplain { get; set; }
