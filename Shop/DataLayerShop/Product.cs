@@ -16,12 +16,13 @@ namespace DataLayerShop
         public string Producter { get; set; }
         public string FullExplain { get; set; }
         public string ShortExplain { get; set; }
-        public int Price { get; set; }
+        private int Price { get; set; }
         public char Buyer { get; set; }
         public char ProductDate { get; set; }
         public char ProductEditDate { get; set; }
-        
-     
+        private DateTime RegisterDate { get; set; }
+
+
         public Product(string persiantitle,string englishtitle,int availablecount,int price) /*سازنده اول*/
         {
             this.PersianTitle = persiantitle;
@@ -41,7 +42,10 @@ namespace DataLayerShop
            
         } 
 
-
+        public void EditPrice(int NewPrice)
+        {
+            this.Price = NewPrice;
+        }
 
     }
 }
