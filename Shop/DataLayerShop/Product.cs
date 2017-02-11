@@ -16,24 +16,30 @@ namespace DataLayerShop
         public string Producter { get; set; }
         public string FullExplain { get; set; }
         public string ShortExplain { get; set; }
-        private int Price { get; set; }
+        public int Price { get; set; }
         public char Buyer { get; set; }
         public char ProductDate { get; set; }
         public char ProductEditDate { get; set; }
-        private DateTime RegisterDate { get; set; }
+        private DateTime RegisterDate { get; set; }    /*زمان ثبت*/
 
-
+        public Product()   /*سازنده اصلی*/
+        {
+            this.RegisterDate= DateTime.Now.Date;
+         
+        }
         public Product(string persiantitle,string englishtitle,int availablecount,int price) /*سازنده اول*/
         {
             this.PersianTitle = persiantitle;
             this.EnglishTitle = englishtitle;
             this.AvailableCount = availablecount;
             this.Price = price;
+            this.RegisterDate = DateTime.Now.Date;
         }
         public Product(string persiantitle,string englishtitle) /*سازنده دوم*/
         {
             this.PersianTitle = persiantitle;
             this.EnglishTitle = englishtitle;
+            this.RegisterDate = DateTime.Now.Date;
         }
 
         public void AddAvailableCount(int AvailableCount)/*نابع افزایش موجودی محصول*/
@@ -42,7 +48,7 @@ namespace DataLayerShop
            
         } 
 
-        public void EditPrice(int NewPrice)
+        public void EditPrice(int NewPrice)/*تغییر قیمت محصول تنها توسط این تابع انجام می شود.*/
         {
             this.Price = NewPrice;
         }
