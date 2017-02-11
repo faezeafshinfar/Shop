@@ -9,20 +9,31 @@ namespace DataLayerShop
     public class Product
     {
         public int ProductCode { get; set; }
-        public int PersianTitle { get; set; }
-        public int EnglishTitle { get; set; }
+        public string PersianTitle { get; set; }
+        public string EnglishTitle { get; set; }
         public int AvailableCount { get; set; }
         public bool IsAvailable { get; set; }
-        public char Producter { get; set; }
-        public char FUllExplain { get; set; }
-        public char ShortExplain { get; set; }
+        public string Producter { get; set; }
+        public string FullExplain { get; set; }
+        public string ShortExplain { get; set; }
         public int Price { get; set; }
         public char Buyer { get; set; }
         public char ProductDate { get; set; }
         public char ProductEditDate { get; set; }
-
-
-
+        
+     
+        public Product(string persiantitle,string englishtitle,int availablecount,int price) /*سازنده اول*/
+        {
+            this.PersianTitle = persiantitle;
+            this.EnglishTitle = englishtitle;
+            this.AvailableCount = availablecount;
+            this.Price = price;
+        }
+        public Product(string persiantitle,string englishtitle) /*سازنده دوم*/
+        {
+            this.PersianTitle = persiantitle;
+            this.EnglishTitle = englishtitle;
+        }
 
 
 
