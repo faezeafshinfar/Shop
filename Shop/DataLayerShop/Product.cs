@@ -35,7 +35,11 @@ namespace DataLayerShop
             this.EnglishTitle = englishtitle;
         }
 
-
+        public void AddAvailableCount(int AvailableCount)/*نابع افزایش موجودی محصول*/
+        {
+            this.AvailableCount+= AvailableCount;
+           
+        } 
 
 
 
