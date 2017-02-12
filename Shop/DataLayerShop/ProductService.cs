@@ -8,7 +8,7 @@ namespace DataLayerShop
 {
     public class ProductServices
     {
-        private Product[] ArrayOfProducts;
+        private Product[] ArrayOfProducts;/*ارایه ای از محصولات*/
         private int AvailableProductCount { get; set; }
 
 
@@ -20,7 +20,7 @@ namespace DataLayerShop
                 item.AvailableCount = 0;
             }
         }
-        public bool AddProduct(Product temp)
+        public bool AddProduct(Product temp)/*تابع افزودن محصول به آرایه ورودی از نوع محصول میگیره*/
         {
             try
             {
@@ -33,13 +33,13 @@ namespace DataLayerShop
                 return false;
             }
         }
-        public bool RemoveProduct(int temp)
+        public bool RemoveProduct(int temp)/*تابع حذف محصول */
         {
             try
             {
                 ProductServices temps = new DataLayerShop.ProductServices();
                 temps.ArrayOfProducts = ArrayOfProducts.Where(i => i.ProductCode != temp).ToArray();/*همه ی محصولات رو غیر از اونی که میخواد حذف شه می ریزه داخل یک متغیر*/
-                ArrayOfProducts = temps.ArrayOfProducts;
+                ArrayOfProducts = temps.ArrayOfProducts;/*همه ی محصولات غیر اونی که میخواد حذف شه*/
                 AvailableProductCount -= 1;/*یکی کم می کنه از تعداد محصولات*/
                 return true;
             }
