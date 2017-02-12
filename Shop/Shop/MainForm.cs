@@ -41,5 +41,35 @@ namespace Shop
         {
 
         }
+
+        private void txtPersianTitle_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtProducter_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtFullExpalin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtShortExplain_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuyer_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

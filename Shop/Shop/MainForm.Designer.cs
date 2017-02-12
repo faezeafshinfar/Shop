@@ -69,6 +69,7 @@
             this.txtPersianTitle.Name = "txtPersianTitle";
             this.txtPersianTitle.Size = new System.Drawing.Size(100, 20);
             this.txtPersianTitle.TabIndex = 2;
+            this.txtPersianTitle.TextChanged += new System.EventHandler(this.txtPersianTitle_TextChanged);
             // 
             // txtBuyer
             // 
@@ -76,6 +77,7 @@
             this.txtBuyer.Name = "txtBuyer";
             this.txtBuyer.Size = new System.Drawing.Size(100, 20);
             this.txtBuyer.TabIndex = 3;
+            this.txtBuyer.TextChanged += new System.EventHandler(this.txtBuyer_TextChanged);
             // 
             // txtPrice
             // 
@@ -83,6 +85,7 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(100, 20);
             this.txtPrice.TabIndex = 4;
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             // 
             // txtShortExplain
             // 
@@ -90,6 +93,7 @@
             this.txtShortExplain.Name = "txtShortExplain";
             this.txtShortExplain.Size = new System.Drawing.Size(100, 20);
             this.txtShortExplain.TabIndex = 5;
+            this.txtShortExplain.TextChanged += new System.EventHandler(this.txtShortExplain_TextChanged);
             // 
             // TxtFullExpalin
             // 
@@ -97,6 +101,7 @@
             this.TxtFullExpalin.Name = "TxtFullExpalin";
             this.TxtFullExpalin.Size = new System.Drawing.Size(100, 20);
             this.TxtFullExpalin.TabIndex = 6;
+            this.TxtFullExpalin.TextChanged += new System.EventHandler(this.TxtFullExpalin_TextChanged);
             // 
             // TxtProducter
             // 
@@ -104,6 +109,7 @@
             this.TxtProducter.Name = "TxtProducter";
             this.TxtProducter.Size = new System.Drawing.Size(100, 20);
             this.TxtProducter.TabIndex = 7;
+            this.TxtProducter.TextChanged += new System.EventHandler(this.TxtProducter_TextChanged);
             // 
             // PersianTitle
             // 
