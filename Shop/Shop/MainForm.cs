@@ -91,18 +91,17 @@ namespace Shop
 
         private void Calculator_Click(object sender, EventArgs e)
         {
-         
-            if (comboBox1.SelectedText == "Squere")
+
+            if (comboBox1.SelectedItem.ToString() == "Squere")
             {
-               
                 Squere sqr = new Shop.Squere(Int32.Parse(this.InputWidth.Text), Int32.Parse(this.InputHeight.Text));
                 this.CalDisplay.Items.Add(sqr.Area().ToString());
             }
-           else if (comboBox1.SelectedText == "Rectangle")
+            else if (comboBox1.SelectedItem.ToString() == "Rectangle")
             {
                 Rectangle rec = new Shop.Rectangle(Int32.Parse(this.InputWidth.Text), Int32.Parse(this.InputHeight.Text));
                 this.CalDisplay.Items.Add(rec.Area().ToString());
-            }
+            } 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -112,15 +111,33 @@ namespace Shop
 
         private void Inputmohit_Click(object sender, EventArgs e)
         {
-            Squere sqr = new Shop.Squere(Int32.Parse(this.InputWidth.Text), Int32.Parse(this.InputHeight.Text));
-            this.CalDisplay.Items.Add(sqr.Mohit().ToString());
+             if (comboBox1.SelectedItem.ToString() == "Squere")
+            {
+                Squere sqr = new Shop.Squere(Int32.Parse(this.InputWidth.Text), Int32.Parse(this.InputHeight.Text));
+                this.CalDisplay.Items.Add(sqr.Mohit().ToString());
+            }
+            else if (comboBox1.SelectedItem.ToString() == "Rectangle")
+            {
+                Rectangle rec = new Shop.Rectangle(Int32.Parse(this.InputWidth.Text), Int32.Parse(this.InputHeight.Text));
+                this.CalDisplay.Items.Add(rec.Mohit().ToString());
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-            Squere sqr = new Shop.Squere(Int32.Parse(this.InputWidth.Text), Int32.Parse(this.InputHeight.Text));
-            this.CalDisplay.Items.Add(sqr.Ghotr().ToString());
+          
+
+            if (comboBox1.SelectedItem.ToString() == "Squere")
+            {
+                Squere sqr = new Shop.Squere(Int32.Parse(this.InputWidth.Text), Int32.Parse(this.InputHeight.Text));
+                this.CalDisplay.Items.Add(sqr.Ghotr().ToString());
+            }
+            else if (comboBox1.SelectedItem.ToString() == "Rectangle")
+            {
+                Rectangle rec = new Shop.Rectangle(Int32.Parse(this.InputWidth.Text), Int32.Parse(this.InputHeight.Text));
+                this.CalDisplay.Items.Add(rec.Ghotr().ToString());
+            }
         }
     }
 }

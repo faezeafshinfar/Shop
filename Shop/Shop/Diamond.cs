@@ -6,31 +6,49 @@ using System.Threading.Tasks;
 
 namespace Shop
 {
-  abstract class Diamond:EntityShape
+    abstract class Diamond : EntityShape
     {
-        public int BigCorner { get; set; }
-        public int ShortCorner { get; set; }
-        public Diamond( int bigCorner,int shortCorner)
+        public float BigCorner { get; set; } //zaviye bozorg
+        public float ShortCorner { get; set; } //zaviye kochik
+        public Diamond(float Big, float Short)
         {
-            BigCorner = bigCorner;
-            ShortCorner = shortCorner;
+                BigCorner = Big;
+                ShortCorner = Short;  
         }
         public Diamond(int size)
         {
             Height = size;
 
         }
-        public int Area()
+        public void OtherCorner(float corner1 )
         {
-            return(BigCorner * ShortCorner / 2);
-           
+            float corner2;
+            corner2 = 180 - corner1;
+            if (corner1 > corner2)
+            {
+                BigCorner = corner1;
+                ShortCorner = corner2;
+            }
+            else
+            {
+                BigCorner = corner2;
+                ShortCorner = corner1;
+            }
         }
-        public int Mohit()
+        public float Area()
+        {
+            return ( BigCorner * ShortCorner / 2);
+
+        }
+        public int Mohit()//in mohiteshe
         {
             return (Height * 4);
-           
-        }
 
-      
+        }
+        //public  BigGhotr()
+        //{
+        //    return 2 * Height * Math.Sin(BigCorner / 2);
+
+        //}
     }
 }
